@@ -123,4 +123,4 @@ STATIC_URL = 'static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR.joinpath("media")
-TOTAL_ON_PAGE = 10
+TOTAL_ON_PAGE = 3
