@@ -14,11 +14,6 @@ from ads.models import Category, Ad
 
 # Create your views here.
 
-def root(request):
-    return JsonResponse({
-        "status": "Ok"
-    })
-
 
 class AdListView(ListView):
     model = Ad
