@@ -1,8 +1,17 @@
-"Django-project"
+# Avito
 
 ```My Django-project!!```
 
-Здесь реализованна работа с пользователями, категориями и с другими models и apps.
+## Run database(docker)
+
+(Windows)
+```shell
+docker run --name Homework_27_Avito \
+    -e POSTGRES_PASSWORD=postgres \
+    -p 5433:5432 \
+    -d \
+    postgres
+  ```  
 
 
 

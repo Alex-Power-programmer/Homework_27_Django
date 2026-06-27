@@ -8,9 +8,6 @@ from ads import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.root),
-    path('ad/', include('ads.urls')),
-    path('cat/', include('cats.urls')),
-    path('user/', include('users.urls')),
 ]
 
 if settings.DEBUG:
