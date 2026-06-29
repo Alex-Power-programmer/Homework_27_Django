@@ -2,12 +2,17 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from rest_framework import routers
 
+from ads.views.locations import LocationsViewSet
 from ads.views.service import root
 from ads.views import ads as ads_view
 from ads.views import category as cat_view
 from ads.views import users as users_view
 
+
+router = routers.SimpleRouter()
+router.register(r'location', LocationsViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -32,6 +37,8 @@ urlpatterns = [
     path('cat/<int:pk>/delete/', cat_view.CategoryDeleteView.as_view()),
 
 ]
+
+urlpatterns += router.urls
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
